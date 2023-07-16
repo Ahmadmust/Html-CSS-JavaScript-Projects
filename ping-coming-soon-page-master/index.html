@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,400;9..144,900&family=Josefin+Sans:wght@300;400;600&family=Plus+Jakarta+Sans:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Ping coming soon page</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+  <div class="container">
+<div class="logo">
+  <img src="/images/logo.svg" alt="Logo">
+</div>
+<div class="headings">
+  <h1>We are launching <span>soon!</span></h1>
+  <p>Subscribe and get notified</p>
+</div>
+<div class="notify-btn">
+<div class="email">
+  <input id="email" type="email" placeholder="Your email address..." onkeyup="validateEmail() ">
+  <br>
+  <span id="email-err"></span>
+</div>
+<div class="btn">
+  <button>Notify Me</button>
+</div>
+</div>
+<div class="main">
+  <img src="/images/illustration-dashboard.png" alt="">
+</div>
+<div class="icons">
+  <div class="fb"> <i class="fa-brands fa-facebook-f " ></i></div>
+  <div class="twitter"> <i class="fa-brands fa-twitter " ></i></div>
+  <div class="insta"> <i class="fa-brands fa-instagram" ></i></div>
+</div>
+<div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
+  </div>
+  
+  <script>
+    var email = document.getElementById("email");
+    var error = document.getElementById("email-err");
+
+    function validateEmail(){
+      if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        
+        error.innerHTML="Please enter a valid Email";
+        return false;
+      }
+      error.innerHTML="";
+      return true;
+    }
+  </script>
+</body>
+</html>

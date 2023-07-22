@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,400;9..144,900&family=Josefin+Sans:wght@300;400;600&family=Plus+Jakarta+Sans:wght@300;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+
+</head>
+<body>
+  <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" id="mpic" class="mobilepic">
+  <div class="container" id="container">
+    <div class="left">
+      <h1>Stay updated!</h1>
+      <p class="heading">Join 60,000+ product managers receiving monthly updates on:</p>
+      <div class="list">
+        <img src="/assets/images/icon-list.svg" alt="">
+        <p>Product discovery and building what matters</p>
+      </div>
+      <div class="list">
+        <img src="/assets/images/icon-list.svg" alt="">
+        <p>Measuring to ensure updates are a success</p>
+      </div>
+      <div class="list">
+        <img src="/assets/images/icon-list.svg" alt="">
+        <p>And much more!</p>
+      </div>
+      <div class="form">
+        <div>
+          <label for="email">Email address</label>
+        <p id="error" style="color: red;"></p>
+        </div>
+        
+        <input id="email" type="email"name="email" placeholder="email@company.com" onkeyup="validateEmail()">
+       <input type="submit" value=" Suscribe to monthly newsletter" id="btn">
+      
+      </div>
+    </div>
+
+    <div class="right">
+    <img class="desktoppic" src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+  </div>
+  </div>
+
+<div class="success active" id="success">
+<div class="icon"></div>
+<div class="thanks">
+  <h1>Thanks for subscribing!</h1>
+  <p> A confirmation email has been sent to <b>ash@loremcompany.com</b>. 
+    Please open it and click the button inside to confirm your subscription.</p>
+</div>
+<div class="dismissBtn">
+  <button onclick="dismissMsg()" id="dismissBtn">Dismiss message</button>
+</div>
+</div>
+
+<script>
+var suscribeBtn = document.getElementById("btn");
+var email = document.getElementById("email");
+var dismissBtn = document.getElementById("dismissBtn");
+var success = document.getElementById("success");
+  var container = document.getElementById("container");
+var error = document.getElementById("error");
+var mobilePic=document.getElementById("mpic");
+
+  suscribeBtn.addEventListener("click",()=>{
+    mobilePic.classList.add("active");
+    container.classList.add("active");
+    success.classList.remove("active");
+  });
+
+  success.addEventListener("click",()=>{
+    success.classList.add("active");
+    mobilePic.classList.remove("active");
+    container.classList.remove("active");
+    
+  });
+  function validateEmail(){
+      if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        error.innerHTML="valid Email required";
+        return false;
+      }
+      error.innerHTML="";
+      return true;
+    }
+
+
+
+</script>
+
+</body>
+</html>

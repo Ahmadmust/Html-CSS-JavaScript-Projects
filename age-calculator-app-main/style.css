@@ -1,0 +1,139 @@
+:root{
+    --Purple:hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+--White: hsl(0, 0%, 100%);
+--Offwhite: hsl(0, 0%, 94%);
+--Lightgrey: hsl(0, 0%, 86%);
+--Smokeygrey: hsl(0, 1%, 44%);
+ --Offblack: hsl(0, 0%, 8%);
+ --font1: 'Barlow', sans-serif;
+--font2: 'Poppins', sans-serif;
+--font3: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 90vh;
+    background-color: var(--Lightgrey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    border-bottom-right-radius: 130px;
+}
+.wrapper{
+    margin: 30px;
+}
+.l1{
+    display: flex;
+    gap: 40px;
+}
+.l2{
+    display: flex;
+    align-items: center;
+}
+label{
+    color: var(--Smokeygrey);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--font3);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+input{
+    width: 60px;
+    padding: 10px;
+    margin-top: 5px;
+    color: black;
+    font-size: 20px;
+    font-family: var(--font3);
+    font-weight: 700;
+}
+input::placeholder{
+    font-size: 20px;
+    font-family: var(--font3);
+    font-weight: 700;
+}
+input:hover{
+    cursor: pointer;
+}
+.l{
+    display: flex;
+    align-items: center;
+}
+.line{
+    width: 80%;
+    height: 1.5px;
+    background-color: var(--Lightgrey);
+}
+.btn{
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    background-color: var(--Purple);
+    background-image: url("/assets/images/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+   border-color: transparent;
+   cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+}
+.year,.month,.days{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-family: var(--font2);
+    font-weight: 800;
+    font-style: italic;
+}
+#m,#d,#y{
+color: var(--Purple);
+font-weight: 800;
+font-family: var(--font2);
+}
+.error{
+    margin-top: 5px;
+    color: red;
+    font-size: 10px;
+}
+
+@media only screen and (max-width:550px){
+    .container{
+       width: 90%;
+       height: auto;
+    }
+    .wrapper{
+        width: 90%;
+       
+    }
+    input{
+        width: 50px;
+    }
+    .l1{
+        gap: 20px;
+    }
+    .l2{
+        margin-top: 1rem;
+    }
+    .line{
+        width: 100%;
+    }
+    .btn{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        position: relative;
+        right: 50%;
+    }
+}

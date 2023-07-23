@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,400;9..144,900&family=Josefin+Sans:wght@300;400;600&family=Plus+Jakarta+Sans:wght@300;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+   <div class="wrapper">
+   <form id="form">
+    <div class="l1">
+   <span>
+    <label id="dayl" for="day">Day</label>
+    <br>
+    <input type="text" name="day" id="day" placeholder="DD">
+    <br>
+    <p id="day-error" class="error"></p>
+   </span>
+    <span>
+      <label id="monthl" for="month">Month</label>
+    <br>
+    <input type="text" name="month" id="month" placeholder="MM">
+    <br>
+    <p id="month-error" class="error"></p>
+    </span>
+    <span>
+      <label id="yearl"for="year">Year</label>
+    <br>
+    <input type="text" name="year" id="year" placeholder="YYYY">
+    <br>
+    <p id="year-error" class="error"></p>
+    </span>
+  </div>
+    <div class="l2">
+      <div class="line"></div>
+     <input type="submit" id="btn" value="" class="btn">
+     </div>
+   </form>
+   <div class="year">
+    <h1 id="y">--</h1>
+    <h1>years</h1>
+   </div>
+   <div class="month">
+    <h1 id="m">--</h1>
+    <h1>months</h1>
+   </div>
+   <div class="days">
+    <h1 id="d">--</h1>
+    <h1>days</h1>
+   </div>
+
+   </div>
+  </div>
+ <script src="app.js"></script>
+</body>
+</html>

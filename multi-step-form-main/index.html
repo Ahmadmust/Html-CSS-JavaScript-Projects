@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,400;9..144,900&family=Josefin+Sans:wght@300;400;600&family=Plus+Jakarta+Sans:wght@300;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="md">
+    <img class="mobile-bg " src="/assets/images/bg-sidebar-mobile.svg" alt="">
+    <div class="steps">
+      <div class="s1">
+        <span class="circle cactive" id="c1">1</span>
+        <span class="text mactive">
+          <p>step 1</p>
+          <h3>your info</h3>
+      </span>
+      </div>
+      <div class="s2">
+        <span  class="circle" id="c2">2</span>
+        <span class="text mactive">
+          <p>step 2</p>
+          <h3>select plan</h3>
+      </span>
+      </div>
+      <div class="s3">
+        <span  class="circle" id="c3">3</span>
+        <span class="text mactive">
+          <p>step 3</p>
+          <h3>add-ons</h3>
+      </span>
+      </div>
+      <div class="s4">
+        <span  class="circle" id="c4">4</span>
+        <span class="text mactive">
+          <p>step 4</p>
+          <h3>summary</h3>
+      </span>
+      </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="left">
+    <img class="desktop-bg" src="/assets/images/bg-sidebar-desktop.svg" alt="">
+    <div class="steps">
+      <div class="s1">
+        <span class="circle cactive" id="c1">1</span>
+        <span class="text mactive">
+          <p>step 1</p>
+          <h3>your info</h3>
+      </span>
+      </div>
+      <div class="s2">
+        <span  class="circle" id="c2">2</span>
+        <span class="text mactive">
+          <p>step 2</p>
+          <h3>select plan</h3>
+      </span>
+      </div>
+      <div class="s3">
+        <span  class="circle" id="c3">3</span>
+        <span class="text mactive">
+          <p>step 3</p>
+          <h3>add-ons</h3>
+      </span>
+      </div>
+      <div class="s4">
+        <span  class="circle" id="c4">4</span>
+        <span class="text mactive">
+          <p>step 4</p>
+          <h3>summary</h3>
+      </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <!--Step1-->
+     <div class="step1" id="step1">
+      <h1>Personal info</h1>
+      <p> Please provide your name, email address, and phone number.</p>
+      <form action="post">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" placeholder="e.g. Stephen King" required>
+        <br>
+        <label for="email">Email Address</label>
+        <br>
+        <input type="email" placeholder="e.g. stephenking@lorem.com">
+        <br>
+        <label for="pno">Phone Number</label>
+        <br>
+        <input type="text" placeholder="e.g. +1 234 567 890">
+      </form>
+      <div class="nextstepBtn mactive">
+        <button id="ns1">Next Step</button>
+      </div>
+      <div class="mnextstepBtn">
+        <button id="mns1">Next Step</button>
+      </div>
+     </div>
+ <!--Step2-->
+     <div class="step2 active" id="step2">
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing</p>
+      <div class="plans">
+        <div class="arcade">
+          <img src="/assets/images/icon-arcade.svg" alt="arcade icon">
+          <span>
+            <h4>Arcade</h4>
+            <p>$9/mo</p>
+          </span>
+        </div>
+        <div class="advanced">
+          <img src="/assets/images/icon-advanced.svg" alt="arcade icon">
+          <span>
+            <h4>Advanced</h4>
+            <p>$12/mo</p>
+          </span>
+        </div>
+        <div class="pro">
+          <img src="/assets/images/icon-pro.svg" alt="arcade icon">
+          <span>
+            <h4>Pro</h4>
+            <p>$15/mo</p>
+          </span>
+        </div>
+      </div>
+      <div class="back">
+        <span>Montly</span>
+        <input id="toggle-switch" type="checkbox" value="monthly"/>
+        <span>Yearly</span>
+      </div>
+     <div class="btns">
+      <div class="nextstepBtn">
+        <button id="ns2">Next Step</button>
+      </div>
+      <div class="gobackBtn">
+        <button id="gb2">Go Back</button>
+      </div>
+     </div>
+     </div>
+<!--Step3-->
+<div class="step3 active" id="step3">
+  <h1>Pick add-ons</h1>
+  <p>Add-ons help enhance gaming experience</p>
+  <div class="add-ons">
+    <div class="online-services b">
+      <input type="checkbox" checked>
+      <span>
+        <h3>Online service</h3>
+      <p>Access to multiplayer games</p>
+      </span>
+      
+      <p class="price">+$1/mo</p>
+    </div>
+    <div class="large-storage b">
+      <input id="addons" type="checkbox" checked>
+     <span>
+      <h3>Large storage</h3>
+      <p>Extra 1TB of sloud save</p>
+     </span>
+      <p class="price">+$2/mo</p>
+    </div>
+    <div class="profile b">
+      <input id="addons" type="checkbox" >
+     <span>
+      <h3>Customizable profile</h3>
+      <p>Custom theme on your profile</p>
+     </span>
+      <p class="price">+$1/mo</p>
+    </div>
+  </div>
+  <div class="btns">
+    <div class="nextstepBtn">
+      <button id="ns3">Next Step</button>
+    </div>
+    <div class="gobackBtn">
+      <button id="gb3">Go Back</button>
+    </div>
+   </div>
+</div>
+<!--Step4-->
+<div class="step4 active" id="step4">
+<h1>Finishing up</h1>
+<p>Double-check everything looks Ok before confirming.</p>
+<div class="amount">
+  <span>
+    <h4 class="selected-plan">Arcade(Monthly)</h4>
+    <button id="change">Change</button>
+  </span>
+  <p id="plan-price">$9/mo</p>
+</div>
+<div class="extra-services">
+  <span>
+    <p class="">Online service</p>
+    <p class="price">+$1/mo</p>
+  </span>
+  <span>
+    <p class="">Large storage</p>
+    <p class="price">+$2/mo</p>
+  </span>
+  <span>
+    <p class="">Customizable profile</p>
+    <p class="price">+$2/mo</p>
+  </span>
+</div>
+<div class="total">
+  <span class="tamount">Total(per month)</span>
+  <p>+$12/mo</p>
+</div>
+<div class="btns">
+  <div class="nextstepBtn">
+    <button id="ns4">Next Step</button>
+  </div>
+  <div class="gobackBtn">
+    <button id="gb4">Go Back</button>
+  </div>
+ </div>
+</div>
+<!--Step5-->
+<div class="step5 active" id="step5">
+<img src="/assets/images/icon-thank-you.svg" alt="Thank you icon">
+<h2>Thank you!</h2>
+<p>  Thanks for confirming your subscription! We hope you have fun
+  using our platform. If you ever need support, please feel free
+  to email us at support@loremgaming.com.</p>
+</div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

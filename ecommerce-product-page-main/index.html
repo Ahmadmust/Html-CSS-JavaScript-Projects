@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,400;9..144,900&family=Hanken+Grotesk:wght@500;700;800&family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Plus+Jakarta+Sans:wght@300;600;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+<link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!--Navbar-->
+  <nav class="nav-mobile">
+    <!--Mobile Navbar-->
+<div class="mleft">
+  <button onclick="openMenu()" style="background-color: transparent;border: none; cursor: pointer;"><img id="menu" src="/images/icon-menu.svg" alt=""></button>
+  <img src="/images/logo.svg" alt="" class="logo">
+</div>
+<div class="mright">
+  <div class="cart-container">
+    <img src="/images/icon-cart.svg" alt="cart" class="cart" id="mcart">
+    <div id="mindicator" class="active"></div>
+  </div>
+  <img src="/images/image-avatar.png" alt="avatar" class="avatar">
+  <div class="cart-wrp active" id="mcart-info">
+    <p class="cart-heading">Cart</p>
+    <div class="divider"></div>
+    <div class="mcart-content empty">
+      <p>Your cart is empty</p>
+    </div>
+  </div>
+</div>
+
+<div id="mobile-nav-con" class="active">
+  <img class="close" id="close" src="/images/icon-close.svg" alt="" onclick="closeMenu()">
+  <ul class="mnav-items">
+    <li class="mnav-link">Collection</li>
+    <li class="mnav-link">Man</li>
+    <li class="mnav-link">Woman</li>
+    <li class="mnav-link">About</li>
+    <li class="mnav-link">Contact</li>
+  </ul>
+</div>
+
+  </nav>
+    <!--Desktop Navbar-->
+    <nav class="nav-desktop">
+    <div class="nav-left">
+<img src="/images/logo.svg" alt="logo" class="logo">
+<ul class="nav-items">
+  <li class="nav-link">Collection</li>
+  <li class="nav-link">Man</li>
+  <li class="nav-link">Woman</li>
+  <li class="nav-link">About</li>
+  <li class="nav-link">Contact</li>
+</ul>
+    </div>
+    <div class="nav-right">
+      <div class="cart-container">
+        <img src="/images/icon-cart.svg" alt="cart" class="cart" id="cart">
+        <div id="indicator" class="active"></div>
+      </div>
+      <img src="/images/image-avatar.png" alt="avatar" class="avatar">
+      <div class="cart-wrp active" id="cart-info">
+        <p class="cart-heading">Cart</p>
+        <div class="divider"></div>
+        <div class="cart-content empty">
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<section>
+  <div class="product-container">
+
+    <div class="mpleft">
+      <div class="m-next" onclick="mnextImage()">
+        <img id="next" src="/images/icon-next.svg" alt="">
+      </div>
+        <img src="/images/image-product-1.jpg" alt="" id="mp-image">
+      <div class="m-prev" onclick="mprevImage()">
+        <img id="prev" src="/images/icon-previous.svg" alt="">
+      </div>
+    </div>
+    <div class="left">
+      <div class="top">
+        <div class="m-next" onclick="nextImage()">
+          <img id="next" src="/images/icon-next.svg" alt="">
+        </div>
+        <div class="m-prev" onclick="prevImage()">
+          <img id="prev" src="/images/icon-previous.svg" alt="">
+        </div>
+        <img src="/images/image-product-1.jpg" alt="image-product-1" class="p1" id="p1">
+        <img src="/images/image-product-2.jpg" alt="image-product-2" class="p2 active" id="p2">
+        <img src="/images/image-product-3.jpg" alt="image-product-3" class="p3 active" id="p3">
+        <img src="/images/image-product-4.jpg" alt="image-product-4" class="p4 active" id="p4">
+      </div>
+      <div class="bottom">
+      <button id="t1"><img src="/images/image-product-1-thumbnail.jpg" alt="" class="t1"></button>
+      <button id="t2"><img src="/images/image-product-2-thumbnail.jpg" alt="" class="t1"></button>
+      <button id="t3"><img src="/images/image-product-3-thumbnail.jpg" alt="" class="t1"></button>
+      <button id="t4"><img src="/images/image-product-4-thumbnail.jpg" alt="" class="t1"></button>
+      </div>
+    </div>
+    <div class="right">
+      <p class="sneaker">Sneaker Company</p>
+      <h1>Fall Limited Edition Sneaker</h1>
+      <p class="descprition">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price-con">
+          <span>
+            <h1>$125.00</h1>
+            <p class="off">50%</p>
+          </span>
+          <p class="ex-price">$250.00</p>
+        </div>
+        <div class="add-cart">
+          <div class="plus-minus">
+            <img src="/images/icon-minus.svg" alt="" id="minus">
+            <p id="order-q">0</p>
+            <img src="/images/icon-plus.svg" alt="" id="plus">
+
+          </div>
+          <div class="addtocart-btn">
+            <button id="addtocart">
+              <img src="/images/icon-cart.svg" alt="">
+              <p>Add to cart</p>
+            </button>
+          </div>
+          <div class="maddtocart-btn">
+            <button id="maddtocart" onclick="Maddtocart()">
+              <img src="/images/icon-cart.svg" alt="">
+              <p>Add to cart</p>
+            </button>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+</div>
+
+
+<div class="lightbox active" id="lightbox">
+  <div class="lightbox-container">
+    <button class="close-lightbox" id="close-lightbox"><img src="./images/icon-close.svg" alt="close"></button>
+    <div class="top">
+      <div class="n" onclick="nextImage()">
+        <img id="next" src="/images/icon-next.svg" alt="">
+      </div>
+      <div class="p" onclick="prevImage()">
+        <img id="prev" src="/images/icon-previous.svg" alt="">
+      </div>
+      <img src="/images/image-product-1.jpg" alt="image-product-1" class="p1" id="lp1">
+      <img src="/images/image-product-2.jpg" alt="image-product-2" class="p2 active" id="lp2">
+      <img src="/images/image-product-3.jpg" alt="image-product-3" class="p3 active" id="lp3">
+      <img src="/images/image-product-4.jpg" alt="image-product-4" class="p4 active" id="lp4">
+    </div>
+    <div class="bottom">
+    <button id="lt1"><img src="/images/image-product-1-thumbnail.jpg" alt="" class="t1"></button>
+    <button id="lt2"><img src="/images/image-product-2-thumbnail.jpg" alt="" class="t1"></button>
+    <button id="lt3"><img src="/images/image-product-3-thumbnail.jpg" alt="" class="t1"></button>
+    <button id="lt4"><img src="/images/image-product-4-thumbnail.jpg" alt="" class="t1"></button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

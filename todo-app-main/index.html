@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+<div class="background"></div>
+<div class="container">
+  <div class="header">
+    <h1>todo</h1>
+    <img src="/images/icon-sun.svg" alt="" class="theme">
+  </div>
+
+<div class="todo-input">
+  <button class="add-btn"></button>
+  <input type="text" name="todo-input" id="todo-input" placeholder="Create a new todo..." aria-label="todo-input">
+</div>
+
+<div class="todos">
+  <ul id="simpleList"></ul>
+</div>
+<div class="mobile-footer">
+  <div class="mobile-count"><span></span> items left</div>
+  <div class="mobile-clear">Clear Completed</div>
+</div>
+<div class="desktop-footer">
+  <div class="count"><span></span> items left</div>
+  <div class="filters">
+    <label>
+      <input type="radio" name="filter" id="all" checked>
+      <span>All</span>
+    </label>
+    <label>
+      <input type="radio" name="filter" id="active">
+      <span>Active</span>
+    </label>
+    <label>
+      <input type="radio" name="filter" id="completed">
+      <span>Completed</span>
+    </label>
+  </div>
+  <div class="clear">Clear Completed</div>
+</div>
+</div>
+<div class="dragdrop">
+  <p>Drag and drop to reorder list</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

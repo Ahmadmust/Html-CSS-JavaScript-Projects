@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries Api With color theme changer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+                <h2>Where in the World</h2>
+               <button class="theme-changer">
+                <i class="fa-regular fa-moon"></i>
+                <h3>Dark Mode</h3>
+               </button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="search-filter">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="search-input" type="text" placeholder="Search for a country...">
+                  </div>
+                    <select class="filter-by-region">
+                        <option hidden>Filter by Region</option>
+                        <option  value="All">All</option>
+                        <option class="option" value="Africa">Africa</option>
+                        <option class="option" value="America">America</option>
+                        <option class="option" value="Asia">Asia</option>
+                        <option class="option" value="Europe">Europe</option>
+                        <option class="option" value="Oceania">Oceania</option>
+                      </select>
+            </div>
+        </section>
+        <section>
+            <div class="countries-container"></div>
+        </section>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

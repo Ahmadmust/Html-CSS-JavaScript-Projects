@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+:root{
+    --font: 'League Spartan', sans-serif;
+    --DarkGray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --VeryDarkGray: hsl(0, 0%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+button{
+    cursor: pointer;
+}
+body{
+  overflow-x: hidden;
+}
+section{
+    width: 100vw;
+}
+
+.top1,.top2,.top3{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+.pic-con{
+    width: 55%;
+    height: 100%;
+    position: relative;
+}
+.pic-con .img{
+    width: 100%;
+    height: 100%;
+}
+.bg1{
+    background: url('/images/desktop-image-hero-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg2{
+    background: url('/images/desktop-image-hero-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg3{
+    background: url('/images/desktop-image-hero-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.pic-con a{
+    text-decoration: none;
+    color: var(--White);
+    font-size: 18px;
+}
+.pic-con nav{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    display: flex;
+    gap: 3rem;
+}
+.pic-con ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.pic-con li{
+    position: relative;
+    cursor: pointer;
+    
+}
+.pic-con li:hover{
+    color: var(--White);
+}
+.pic-con li:hover::after{
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 10px;
+    border-radius: 10px;
+    display: block;
+    background-color: var(--White);
+    width: 50%;
+    height: 3px;
+}
+.text-con{
+    width: 45%;
+    height: 100%;
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: column;
+}
+.text-con h1{
+    margin-top: 1em;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+.text-con .descprition{
+    margin-top: 1rem;
+    color: var(--DarkGray);
+    letter-spacing: 1px;
+    line-height:20px;
+    text-align: justify;
+}
+.text-con .shopbtn{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+.shopbtn p{
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 7px;
+    color: var(--VeryDarkGray);
+    cursor: pointer;
+}
+.shopbtn:hover p{
+    filter: brightness(0) saturate(100%) invert(93%) sepia(1%) saturate(1487%) hue-rotate(315deg) brightness(69%) contrast(90%);
+    color: var(--DarkGray);
+}
+
+.sliderbtns{
+    display: flex;
+    position: absolute;
+    right: -148px;
+    bottom: 0;
+    z-index: 99;
+}
+.sliderbtns button{
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    padding: 15px 30px;
+}
+.sliderbtns button:hover{
+    background-color: var(--VeryDarkGray);
+}
+
+.bottom{
+    height: 40vh;
+    display: flex;
+}
+.bottom img{
+    width: 33vw;
+    height: 100%;
+}
+.bottom .text{
+    padding: 30px;
+}
+.bottom .text h2{
+    margin-top: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.bottom .text p{
+    line-height: 1.2rem;
+    text-align: justify;
+    margin-top: 1rem;
+    color: var(--DarkGray);
+}
+.mob-nav{
+    display: none;
+}
+.active{
+    display: none;
+}
+
+ @media (min-width:820px) and (max-width:1199px) {
+   .text-con h1{
+    font-size: 1.5em;
+   }
+   .text-con .descprition{
+    letter-spacing: normal;
+    line-height: normal;
+   }
+   .bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 40vh;
+   }
+   .text .p{
+    line-height: normal;
+   }
+   .mob-nav{
+    display: none;
+}
+}
+@media (min-width:481px) and (max-width:819px) {
+    section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .top1,.top2,.top3{
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .pic-con{
+        width: 100%;
+        position: relative;
+    }
+    .pic-con img{
+        width: 100%;
+    }
+    .text-con{
+        width: 100%;
+        padding: 15px 4rem;
+    }
+    .sliderbtns{
+        right: 0;
+        bottom: 0;
+    }
+    .sliderbtns button{
+        padding: 10px 20px;
+    }
+    .bottom{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom img{
+        display: block;
+        width: 100%;
+    }
+    .mob-nav{
+        display: none;
+    }
+}
+@media (max-width:480px){
+    .pic-con nav{
+        display: none;
+    }
+
+    .bg1{
+        background: url('/images/mobile-image-hero-1.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    .bg2{
+        background: url('/images/mobile-image-hero-2.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .bg3{
+        background: url('/images/mobile-image-hero-3.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .top1,.top2,.top3{
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .pic-con{
+        width: 100vw;
+        min-height: 50vh;
+        position: relative;
+    }
+    .text-con{
+        width: 100%;
+        padding: 15px 4rem;
+    }
+    .text-con h1{
+        font-size: 35px;
+    }
+    .sliderbtns{
+        right: 0;
+        bottom: 0;
+    }
+    .sliderbtns button{
+        padding: 10px 20px;
+    }
+    .bottom{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom img{
+        display: block;
+        width: 100%;
+    }
+    .mobilenav{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .mobilenav nav ul{
+        list-style: none;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .mobilenav img{
+        cursor: pointer;
+    }
+    .mob-nav{
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+        position: absolute;
+        top: 3rem;
+        left: 2rem;
+    }
+    .open{
+        cursor: pointer;
+    }
+
+    .active{
+        display: none;
+    }
+}

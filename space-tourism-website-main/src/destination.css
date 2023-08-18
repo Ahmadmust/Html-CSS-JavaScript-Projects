@@ -1,0 +1,264 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #0B0D17;
+    background: url('/assets/destination/background-destination-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.container .top-pic{
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+    align-items: center;
+}
+.top-pic {
+    color: #FFF;
+font-family: Barlow Condensed;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 4.725px;
+text-transform: uppercase;
+}
+.top-pic p{
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4.725px;
+    opacity: 0.25;
+}
+.info-con{
+    margin-top: 4rem;
+    gap: 10rem;
+    display: flex;
+}
+.info-con .destination-pic{
+    width: 80%;
+}
+.destination-pic img{
+    width: 80%;
+    animation: rotate 100s linear infinite;
+}
+.destination-info{
+    padding-bottom: 3rem;
+}
+.destination-info .dnav ul{
+    display: flex;
+    gap: 20px;
+}
+.destination-info .dnav a{
+    color: #D0D6F9;
+font-family: Barlow Condensed;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.7px;
+text-transform: uppercase;
+}
+.destination-info .dest-name{
+    margin-top: 1rem;
+    color: #FFF;
+font-family: Bellefair;
+font-size: 100px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.destination-info p{
+width: 444px;
+color: #D0D6F9;
+font-family: 'sBarlow';
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+text-align: justify;
+line-height: 22px; /* 177.778% */
+}
+.destination-info hr{
+    margin-top: 4rem;
+}
+.destination-info .distance-time{
+    margin-top: 2rem;
+    width: 444px;
+    display: flex;
+    justify-content: space-between;
+}
+.dstination-info .distance,.destination-info .time{
+    display: flex;
+    flex-direction: column;
+}
+
+.distance-time h1{
+    margin-top: .5rem;
+color: #FFF;
+font-family: Bellefair;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+.distance-time h3{
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+    text-transform: uppercase;
+}
+.dnav li{
+    position: relative;
+}
+.dnav li:hover{
+    color: #FFF;
+}
+.dnav li:hover::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    border-radius: 10px;
+    display: block;
+    background-color: #FFF;
+    width: 100%;
+    height: 3px;
+    opacity: .5;
+}
+.dnav .dest-active a{
+    color: #fff;
+}
+.dest-active::before{
+    position: relative;
+}
+.dest-active::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    border-radius: 10px;
+    display: block;
+    background-color: #FFF;
+    width: 100%;
+    height: 3px;
+}
+@keyframes rotate{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
+}
+
+@media (min-width:700px) and (max-width:1199px){
+    .container{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+    }
+    .info-con{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .destination-pic{
+        width: 100%;
+        margin-left: 30%;
+    }
+    .destination-pic img{
+        width: 50%;
+    }
+    .destination-info{
+        margin-top: 0;
+    }
+}
+@media (max-width:699px){
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+    .top-pic{
+        
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+    }
+    .top-pic p{
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.7px;
+        opacity: 0.25;
+    }
+    .info-con{
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 3rem;
+    }
+    .destination-pic{
+        width: 80%;
+    }
+    .destination-info{
+       width: 100%;
+    }
+    .dnav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .destination-info .dnav a{
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+    }
+    .destination-info .dest-name{
+        margin-top: 1.5rem;
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .destination-info .dest-descprition{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .distance-time{
+        width: 100%;
+        flex-direction: column;
+        gap: 3rem;
+        margin: auto;
+    }
+}

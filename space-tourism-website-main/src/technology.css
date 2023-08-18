@@ -1,0 +1,304 @@
+body{
+    width: 100%;
+    background: url('/assets/technology/background-technology-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section{
+    width: 100%;
+}
+.no{
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.375px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 10px;
+}
+.no p{
+color: #FFF;
+font-family: Barlow Condensed;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 3.375px;
+opacity: 0.25;
+}
+.tech-container{
+    width: 90%;
+    margin-left: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4rem;
+}
+.tech-container .tech-pic img{
+    height: 60vh;
+}
+.tech-info{
+    display: flex;
+   align-items: center;
+   gap: 4rem;
+}
+
+.circles{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-direction: column;
+}
+.circles .c{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border:1px solid #FFF;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tech-info h3{
+    color: #D0D6F9;
+    font-family: Barlow Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+}
+.tech-info h1{
+    margin-top: .5rem;
+    color: #FFF;
+    font-family: Bellefair;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.tech-info p{
+    margin-top: 1rem;
+    color: #D0D6F9;
+    font-family: Barlow;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 177.778% */
+}
+.tab-mob{
+    display: none;
+}
+.selected{
+    color: #0B0D17 !important;
+    background-color: #FFF;
+}
+@media (min-width:700px) and (max-width:1199px){
+    body{
+        width: 100%;
+        background: url('/assets/technology/background-technology-tablet.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .desktop-img{
+        display: none;
+    }
+    .tab-mob{
+        display: block;
+    }
+    section{
+        width: 100%;
+    }
+    .no{
+        width: 80%;
+        margin: auto;
+        margin-top: 2rem;
+        color: #FFF;
+        font-family: Barlow Condensed;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3.375px;
+        text-transform: uppercase;
+        display: flex;
+    }
+    .no p{
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.375px;
+    opacity: 0.25;
+    }
+    .tech-container{
+        margin-top: 3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .tech-container .tech-pic img{
+        width: 100%;
+    }
+    .tech-info{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .circles{
+        
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-direction: row;
+    }
+    .circles .c{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .tech-info h3{
+        margin-top: 1rem;
+        color: #D0D6F9;
+text-align: center;
+font-family: Barlow Condensed;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.362px;
+    }
+    .tech-info h1{
+        margin-top: .5rem;
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    .tech-info p{
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px; /* 166.667% */
+        margin-bottom: 3rem;
+    }
+    .selected{
+        color: #0B0D17 !important;
+        background-color: #FFF;
+    }
+}
+@media (max-width:699px){
+    body{
+        width: 100%;
+        background: url('/assets/technology/background-technology-mobile.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .desktop-img{
+        display: block;
+    }
+    .tab-mob{
+        display: none;
+    }
+    .tech-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .tech-pic{
+        width: 100%;
+    }
+    .tech-pic img{
+        width: 100%;
+    }
+    .tech-info{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .circles{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-direction: row;
+    }
+    .circles .c{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .tech-info h3{
+        margin-top: 1rem;
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow Condensed;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.362px;
+    }
+    .tech-info h1{
+        margin-top: .5rem;
+        color: #FFF;
+        text-align: center;
+        font-family: Bellefair;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+    .tech-info p{
+        color: #D0D6F9;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px; /* 166.667% */
+        margin-bottom: 3rem;
+    }
+    .selected{
+        color: #0B0D17 !important;
+        background-color: #FFF;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="destination.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/assets/shared/logo.svg" alt="">
+    </div>
+    <div class="line"></div>
+    <div class="navbar">
+      <nav class="desktop">
+        <ul>
+        <a href="index.html"><li>00 home</li></a>
+        <a href="destinations.html"><li class="active-page">01 destination</li></a>
+        <a href="crew.html"><li>02 crew</li></a>
+        <a href="technology.html"><li>04 techonolgy</li></a>
+        </ul>
+      </nav>
+      <nav class="tablet">
+        <ul>
+        <a href="index.html"><li>home</li></a>
+        <a href="destinations.html"><li class="active-page">destination</li></a>
+        <a href="crew.html"><li>crew</li></a>
+        <a href="technology.html"><li>techonolgy</li></a>
+        </ul>
+      </nav>
+    </div>
+    <div class="open">
+      <img src="/assets/shared/icon-hamburger.svg" alt="">
+    </div>
+  </header>
+  <div class="container">
+      <h2 class="top-pic"><p class="dest-count">01</p>PICK YOUR DESTINATION</h2>
+      <div class="info-con">
+        <div class="destination-pic">
+          <img src="/assets/destination/image-moon.webp" alt="">
+        </div>
+        <div class="destination-info">
+          <div class="dnav">
+            <ul>
+              <li class="moon dest-active"><a href="#" onclick="moon()">Moon</a></li>
+              <li class="mars"><a href="#" onclick="mars()">Mars</a></li>
+              <li class="europa"><a href="#" onclick="europa()">europa</a></li>
+              <li class="titan"><a href="#" onclick="titan()">titan</a></li>
+            </ul>
+          </div>
+          <h1 class="dest-name">Moon</h1>
+          <p class="dest-descprition">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+          <hr>
+          <div class="distance-time">
+            <div class="distance">
+              <h3>Avg.distance</h3>
+              <h1>384,400 km</h1>
+            </div>
+            <div class="time">
+              <h3>est.time</h3>
+              <h1>3 days</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="mobile-nav active">
+    <img class="close" src="/assets/shared/icon-close.svg" alt="">
+    <nav>
+      <ul>
+        <a href="index.html"><li>00 home</li></a>
+        <a href="destinations.html"><li>01 destination</li></a>
+        <a href="crew.html"><li>02 crew</li></a>
+        <a href="technology.html"><li>04 techonolgy</li></a>
+        </ul>
+    </nav>
+  </div>
+  <script src="destination.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
